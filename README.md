@@ -155,23 +155,31 @@ $ touch README.md
 $ git add README.md 
 $ git commit -m"first commit" 
 $ git push origin master
+
 2.Создайте файл hello_world.cpp в локальной копии репозитория (который должен был появиться на шаге 2). 
+
 3.Реализуйте программу Hello world на языке C++ используя плохой стиль кода. Например, после заголовочных файлов вставьте строку using namespace std;. 
 $ mkdir sources 
 $ mkdir examples 
 $ cat > sources/hello_world.cpp <<EOF #include <hello_world.hpp> using namespace std
 int main() { cout << "hello world" << endl; } EOF 
+
 4. Добавьте этот файл в локальную копию репозитория. 
 $ git add sources/hello_world.cpp 
+
 5. Закоммитьте изменения с осмысленным сообщением. 
 $ git commit -m"create hello_world.cpp" 
+
 6. Изменитьте исходный код так, чтобы программа через стандартный поток ввода запрашивалось имя пользователя. А в стандартный поток вывода печаталось сообщение Hello world from @name, где @name имя пользователя. 
 $ edit sources/hello_world.cpp #include <hello_world.hpp> #include using namespace std
 
 int main() { string name; cout << "enter your name" << endl; cin >> name; cout << endl << "hello world" << endl; } 
+
 7. Закоммитьте новую версию программы. Почему не надо добавлять файл повторно git add? Ответ: После изменений он сохранится автоматически 
+
 8. Запуште изменения в удалёный репозиторий. 
 $ git push origin master 
+
 9. Проверьте, что история коммитов доступна в удалёный репозитории.
 
 # Part II
